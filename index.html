@@ -85,5 +85,22 @@
             <p>Created with love by Evans</p>
         </footer>
         <script src="script.js"></script>
+        <script>
+            const form = document.querySelector("form");
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const data = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json'}
+                });
+                if (response.ok) {
+                    form.innerHTML = "<h3>Thank you </h3><p>Your tribute has been received.</p>";
+                } else {
+                    form.innerHTML = "<p>Oops ! Something went wrong. Please try again later.</p>";
+                }
+            });
+        </script>
     </body>
 </html>
