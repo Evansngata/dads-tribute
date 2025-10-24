@@ -1,0 +1,255 @@
+body {
+    font-family: "Segoe UI", Arial,  sans-serif;
+    background-color: #fdf6ec;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #e6ccb2;
+    padding: 30px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    font-style: italic;
+    color: #555;
+}
+
+main {
+    margin-top: 30px;
+}
+
+.dad-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #d4a373;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #6b4f4f;
+    margin-top: 15px;
+}
+
+p {
+    max-width: 600px;
+    margin: 15px auto;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #e6ccb2;
+    color: #333;
+    font-size: 0.9em;
+}
+
+#about {
+    background-color: #fff8f0;
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    color: #6b4f4f;
+    border-bottom: 2px solid #d4a373;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+#abot p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #444;
+    text-align: left;
+}
+
+#gallery {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#gallery h2 {
+    color: #6b4f4f;
+    border-bottom: 2px solid #d4a373;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+.gallery-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+#memories {
+    background-color: #fff8f0;
+    padding: 40px 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#memories h2 {
+    color: #6b4f4f;
+    border-bottom: 2px solid #d4a373;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+.memory {
+    background-color: #fefaf5;
+    border-left: 5px solid #d4a373;
+    margin: 15px 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.memory:hover {
+    background-color: #fff3e0;
+}
+
+.memory p {
+    font-size: 1.1em;
+    margin: 0;
+    color: #333;
+}
+
+.memory span {
+    display: block;
+    margin-top: 8px;
+    color: #6b4f4f;
+    font-style: italic;
+    font-size: 0.95em;
+}
+
+#contact {
+    background-color: #fff8f0;
+    padding: 40px 20px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#contact h2 {
+    color: #6b4f4f;
+    border-bottom: 2px solid #d4a373;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    color: #444;
+    font-size: 1.05em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d4a373;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+button {
+    background-color: #d4a373;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b8874d;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 0;
+    }
+    header {
+        padding: 20px 10px;
+    }
+
+    .dad-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    #about, #memories, #contact {
+        padding: 20px 15px;
+        margin: 25px auto;
+    }
+
+    #gallery .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-container img {
+        width: 85%;
+        height: auto;
+    }
+
+    input, textarea {
+        font-size: 1em;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    footer {
+        font-size: 0.85em;
+    }
+}
