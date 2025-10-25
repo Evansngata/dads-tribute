@@ -198,6 +198,35 @@ button:hover {
     background-color: #b8874d;
 }
 
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+
 @media (max-width: 768px) {
     body {
         font-size: 16px;
