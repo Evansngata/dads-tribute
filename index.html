@@ -79,6 +79,23 @@
                 <button type="submit">Submit Tribute</button>
             </form>
         </section>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/dad.jpg" alt="Dad photo ">
+            </div>
+            <div class="slide fade">
+                <img src="images/dad1.jpg" alt="Dad photo 2">
+            </div>
+            <div class="slide fade">
+                <img src="images/dad2.jpg" alt="Dad photo 3">
+            </div>
+            <div class="slide fade">
+                <img src="images/dad3.jpg" alt="Dad photo 4">
+            </div>
+            <div class="slide fade">
+                <img src="images/dad4.jpg" alt="Dad photo 5">
+            </div>
+        </div>
         </main>
 
         <footer>
@@ -86,21 +103,19 @@
         </footer>
         <script src="script.js"></script>
         <script>
-            const form = document.querySelector("#contact form");
-            form.addEventListener("submit", async (e) => {
-                e.preventDefault();
-                const data = new FormData(form);
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: data,
-                    headers: { 'Accept': 'application/json'}
-                });
-                if (response.ok) {
-                    form.innerHTML = "<h3>Thank you </h3><p>Your tribute has been received.</p>";
-                } else {
-                    form.innerHTML = "<p>Oops ! Something went wrong. Please try again later.</p>";
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                const slides = document.getElementsByClassName("slide");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
                 }
-            });
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 4000);
+            }
         </script>
     </body>
 </html>
