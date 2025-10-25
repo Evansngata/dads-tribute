@@ -263,6 +263,16 @@ button:hover {
     button {
         width: 100%;
     }
+
+    .slideshow-container {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -280,5 +290,11 @@ button:hover {
 
     footer {
         font-size: 0.85em;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+        border-radius: 5px;
+        box-shadow: none;
     }
 }
